@@ -26,6 +26,7 @@ type Result struct {
 
 var (
 	generateLinks bool
+	noRedirect    bool
 	outputFile    string
 	outputFormat  string
 	results       []Result
@@ -34,6 +35,7 @@ var (
 func main() {
 	// Parse command line flags
 	flag.BoolVar(&generateLinks, "g", false, "Generate full URLs from robots.txt paths")
+	flag.BoolVar(&noRedirect, "n", false, "Do not follow redirects")
 	flag.StringVar(&outputFile, "o", "", "Output file for generated links (e.g., output.txt or output.json)")
 	flag.Parse()
 
@@ -145,6 +147,9 @@ func fetchAndPrintRobots(targetURL string, multiMode bool) {
 	client := &http.Client{
 		Timeout: 10 * time.Second,
 		CheckRedirect: func(req *http.Request, via []*http.Request) error {
+			if noRedirect {
+				return http.ErrUseLastResponse
+			}
 			if len(via) >= 10 {
 				return fmt.Errorf("too many redirects")
 			}
