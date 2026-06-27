@@ -16,7 +16,7 @@ A fast and efficient robots.txt reconnaissance tool for security researchers and
 ⠀⠪⠂⡀⣠⣴⠚⡇⠀⣨⡧⠿⠿⠿⢷⢶⢿⣶⠿⠟⣿⣿⣿⣿⡇
 ```
 
-## 🚀 Features
+## 🚀 Features:
 
 - **Fast & Lightweight**: Written in Go for optimal performance
 - **Bulk Processing**: Process multiple domains from stdin or file
