@@ -26,7 +26,7 @@ A fast and efficient robots.txt reconnaissance tool for security researchers and
 - **Gzip Support**: Automatic decompression of gzipped responses
 - **Error Handling**: Graceful handling of timeouts, redirects, and HTTP errors
 
-## 📦 Installation
+## 📦 Installation:
 
 ### Option 1: Go Install (Recommended)
 ```bash
@@ -48,7 +48,7 @@ cd RoboChan
 go build -o robochan robochan.go
 ```
 
-## 🛠️ Usage
+## 🛠️ Usage:
 
 ### Basic Usage
 
@@ -101,7 +101,7 @@ cat domains.txt | robochan -g | httpx -silent -sc
 subfinder -d example.com -silent | robochan -g (sometimes it doesn't parse correctly)
 ```
 
-## 📋 Input Format
+## 📋 Input Format:
 
 RoboChan accepts domains in the following formats:
 - `example.com` (automatically adds https://)
@@ -115,7 +115,7 @@ facebook.com
 microsoft.com
 ```
 
-## 📤 Output Formats
+## 📤 Output Formats:
 
 ### Text Output (-o results.txt)
 ```
@@ -141,7 +141,7 @@ https://tesla.com/private/
 ]
 ```
 
-## 🔧 Advanced Usage
+## 🔧 Advanced Usage:
 
 ### Integration with Bug Bounty Workflows
 
@@ -172,14 +172,14 @@ cat domains.txt | robochan -g | grep -E "\.(php|asp|jsp|do|action|cfm)$"
 cat domains.txt | robochan -g | grep -E "(\.bak|\.old|config|\.env|\.git)"
 ```
 
-## ⚡ Performance
+## ⚡ Performance:
 
 - **Concurrent Processing**: Processes multiple domains simultaneously
 - **Timeout Handling**: 10-second timeout per request with redirect limits
 - **Memory Efficient**: Streams input and processes on-the-fly
 - **Rate Limiting**: Built-in crawl-delay respect
 
-## 🛡️ Security Features
+## 🛡️ Security Features:
 
 - **WAF Bypass**: Uses realistic browser headers
 - **User-Agent Rotation**: Mimics legitimate browser traffic  
@@ -187,7 +187,7 @@ cat domains.txt | robochan -g | grep -E "(\.bak|\.old|config|\.env|\.git)"
 - **Error Recovery**: Graceful handling of blocked requests
 - **Redirect Following**: Automatic redirect handling with limits
 
-## 📊 Use Cases
+## 📊 Use Cases:
 
 - **Bug Bounty Hunting**: Discover hidden endpoints and admin panels
 - **Penetration Testing**: Enumerate web application structure
@@ -195,23 +195,23 @@ cat domains.txt | robochan -g | grep -E "(\.bak|\.old|config|\.env|\.git)"
 - **Security Research**: Analyze robots.txt implementation patterns
 - **Web Scraping**: Respect robots.txt while gathering intelligence
 
-## 🥃 Screenshot
+## 🥃 Screenshot:
 
 ![RoboChan](Images/screenshot.png)
 
-## 🐛 Bug Reports
+## 🐛 Bug Reports:
 
 Report bugs and request features via [GitHub Issues](https://github.com/maxmuxammil/RoboChan/issues).
 
-## 📝 License
+## 📝 License:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ⚠️ Disclaimer
+## ⚠️ Disclaimer:
 
 This tool is for educational and authorized security testing purposes only. Users are responsible for compliance with applicable laws and regulations. The author is not responsible for misuse of this tool.
 
-## 🔗 Related Tools
+## 🔗 Related Tools:
 
 - [httpx](https://github.com/projectdiscovery/httpx) - Fast HTTP probe
 - [subfinder](https://github.com/projectdiscovery/subfinder) - Subdomain discovery  
